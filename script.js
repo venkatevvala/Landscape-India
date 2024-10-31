@@ -23,4 +23,3 @@ $(document).ready(function() {
         $('#price-display').text(`Selected Location (Lat: ${lat.toFixed(4)}, Lng: ${lng.toFixed(4)}) - Price: ₹${dummyPrice}`);
     });
 });
-
