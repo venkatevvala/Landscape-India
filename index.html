@@ -22,6 +22,23 @@
             <p>Landscape India is dedicated to helping you find the perfect piece of land in India. We provide detailed listings with all the specifications you need, ensuring that you have the information required to make an informed decision. Our goal is to connect land buyers with sellers while providing an easy and enjoyable experience.</p>
         </section>
 
+        <section id="filter-container">
+            <h2>Filter Options</h2>
+            <input type="text" id="search" placeholder="Search by land name...">
+            <select id="state-filter">
+                <option value="">Select State</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Punjab">Punjab</option>
+            </select>
+            <label for="price-range">Price Range:</label>
+            <input type="range" id="price-range" min="1000000" max="10000000" value="5000000" step="100000">
+            <span id="price-value">Price: ₹5,000,000</span>
+        </section>
+
         <section id="map-container">
             <h2>Select a Location</h2>
             <div id="map"></div>
@@ -30,48 +47,57 @@
         
         <section id="land-list">
             <h2>Available Lands for Sale</h2>
-            <div class="land-item">
+            <div class="land-item" data-state="Rajasthan" data-price="3000000">
                 <h3>Land in Rajasthan</h3>
                 <p>Price: ₹30,00,000</p>
                 <p>Proximity to Water Source: 1 km</p>
                 <p>Distance to Nearest Land: 500 m</p>
                 <button onclick="contactOwner('Rajasthan')">Contact Owner</button>
             </div>
-            <div class="land-item">
+            <div class="land-item" data-state="Karnataka" data-price="5000000">
                 <h3>Land in Karnataka</h3>
                 <p>Price: ₹50,00,000</p>
                 <p>Proximity to Water Source: 2 km</p>
                 <p>Distance to Nearest Land: 300 m</p>
                 <button onclick="contactOwner('Karnataka')">Contact Owner</button>
             </div>
-            <div class="land-item">
+            <div class="land-item" data-state="Maharashtra" data-price="4000000">
                 <h3>Land in Maharashtra</h3>
                 <p>Price: ₹40,00,000</p>
                 <p>Proximity to Water Source: 1.5 km</p>
                 <p>Distance to Nearest Land: 700 m</p>
                 <button onclick="contactOwner('Maharashtra')">Contact Owner</button>
             </div>
-            <div class="land-item">
+            <div class="land-item" data-state="Gujarat" data-price="3500000">
                 <h3>Land in Gujarat</h3>
                 <p>Price: ₹35,00,000</p>
                 <p>Proximity to Water Source: 2 km</p>
                 <p>Distance to Nearest Land: 400 m</p>
                 <button onclick="contactOwner('Gujarat')">Contact Owner</button>
             </div>
-            <div class="land-item">
+            <div class="land-item" data-state="Uttar Pradesh" data-price="2800000">
                 <h3>Land in Uttar Pradesh</h3>
                 <p>Price: ₹28,00,000</p>
                 <p>Proximity to Water Source: 3 km</p>
                 <p>Distance to Nearest Land: 600 m</p>
                 <button onclick="contactOwner('Uttar Pradesh')">Contact Owner</button>
             </div>
-            <div class="land-item">
+            <div class="land-item" data-state="Punjab" data-price="3200000">
                 <h3>Land in Punjab</h3>
                 <p>Price: ₹32,00,000</p>
                 <p>Proximity to Water Source: 1 km</p>
                 <p>Distance to Nearest Land: 800 m</p>
                 <button onclick="contactOwner('Punjab')">Contact Owner</button>
             </div>
+        </section>
+
+        <section id="feedback">
+            <h2>Customer Feedback</h2>
+            <form id="feedback-form">
+                <input type="text" placeholder="Your Name" required>
+                <textarea placeholder="Your Feedback" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
         </section>
     </main>
 
